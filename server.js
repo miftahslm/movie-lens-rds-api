@@ -68,14 +68,14 @@ async function connectToDatabase() {
 }
 
 // Pagination helper
-const paginate = (page = 1, limit = 50) => {
+const paginate = (page = 1, limit = 100000) => {
   const offset = (page - 1) * limit;
   return { limit, offset };
 };
 
 // Endpoint ambil daftar film
 app.get('/movies', (req, res) => {
-  const { page = 1, limit = 50, search = "" } = req.query;
+  const { page = 1, limit = 100000, search = "" } = req.query;
   const { offset } = paginate(page, limit);
   const cacheKey = `movies_${page}_${limit}_${search}`;
 
