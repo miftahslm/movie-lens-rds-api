@@ -6,17 +6,7 @@
   "scripts": {
   "start": "node server.js"
   },
-  "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
-    "init-db-minimal": "node scripts/init-db-minimal.js",
-    "test:performance": "k6 run tests/performance-test.js",
-    "test:concurrent": "k6 run tests/concurrent-test.js --out json=results/concurrent.json",
-    "test:large-data": "k6 run tests/large-data-test.js --out json=results/large-data.json",
-    "test:all": "npm run test:performance && npm run test:concurrent && npm run test:large-data",
-    "check-total": "node scripts/check-total.js",
-    "test:remote": "k6 run tests/remote-performance-test.js"
-  },
+  
   "dependencies": {
     "@aws-sdk/client-s3": "^3.913.0",
     "compression": "^1.8.1",
